@@ -54,8 +54,8 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.VHPahlawan>{
                 Intent kirim = new Intent(ctx, DetailActivity.class);
                 kirim.putExtra("xNama", xNama);
                 kirim.putExtra("xAlamat", xAlamat);
-                kirim.putExtra("xJamBuka" xJamBuka);
-                kirim.putExtra("xKontak" xKontak);
+                kirim.putExtra("xJamBuka", xJamBuka);
+                kirim.putExtra("xKontak", xKontak);
                 kirim.putExtra("xFoto", xFoto);
                 ctx.startActivity(kirim);
 
