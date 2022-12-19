@@ -57,7 +57,7 @@ public class AdapterIndomaret extends RecyclerView.Adapter<AdapterIndomaret.Clas
                 Intent kirim = new Intent(ctx, DetailActivity.class);
                 kirim.putExtra("xNama", xNama);
                 kirim.putExtra("xAlamat", xAlamat);
-                kirim.putExtra("xJambBuka", xJamBuka);
+                kirim.putExtra("xJamBuka", xJamBuka);
                 kirim.putExtra("xKontak", xKontak);
                 kirim.putExtra("xFoto", xFoto);
                 ctx.startActivity(kirim);

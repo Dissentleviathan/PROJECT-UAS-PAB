@@ -53,6 +53,13 @@
             android:justificationMode="inter_word"
             style="@style/TextAppearance.AppCompat.Medium"/>
 
+        <Button
+            android:id="@+id/btn_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buka Lokasi"
+            android:layout_marginBottom="16dp"/>
+
 
     </LinearLayout>
 
