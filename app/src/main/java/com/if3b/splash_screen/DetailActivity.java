@@ -18,7 +18,7 @@ import  com.bumptech.glide.Glide;
 public class DetailActivity extends AppCompatActivity {
     private ImageView ivFoto;
     private TextView tvNama, tvAlamat, tvJamBuka, tvKontak;
-    private String yNama, yAlamat, yJamBuka, yKontak, yFoto;
+    private String yNama, yAlamat, yJamBuka, yKontak, yFoto, getLokasi;
     private Button btnLokasi;
 
     @Override
@@ -26,8 +26,9 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        btnLokasi = findViewById(R.id.btn_lokasi);
 
+
+        btnLokasi = findViewById(R.id.btn_lokasi);
 
 
         ivFoto = findViewById(R.id.iv_foto);
@@ -48,5 +49,16 @@ public class DetailActivity extends AppCompatActivity {
         tvJamBuka.setText(yJamBuka);
         tvKontak.setText(yKontak);
         Glide.with(DetailActivity.this).load(yFoto).into(ivFoto);
+        btnLokasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getLokasi = yNama;
+
+                Uri location = Uri.parse("geo:0,0?q=" + getLokasi);
+
+                Intent bukaLokasi = new Intent(Intent.ACTION_VIEW, location);
+                startActivity(bukaLokasi);
+            }
+        });
     }
 }
