@@ -1,6 +1,7 @@
 package com.if3b.splash_screen;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.content.Intent;
 import android.view.View;
@@ -40,6 +41,28 @@ public class AdapterIndomaret extends RecyclerView.Adapter<AdapterIndomaret.Clas
     holder.tvJambuka.setText(indomaret.getJamBuka());
     holder.tvKontak.setText(indomaret.getKontak());
         Glide.with(ctx).load(indomaret.getFoto()).centerCrop().into(holder.ivFoto);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String xNama = indomaret.getNama();
+                String xAlamat = indomaret.getAlamat();
+                String xJamBuka = indomaret.getJamBuka();
+                String xKontak = indomaret.getKontak();
+                String xFoto = indomaret.getFoto();
+
+
+                Log.d("CEKNRICEK", xNama+"|" + xAlamat + "|" + xJamBuka + "|" + xKontak + "|" + xFoto);
+
+                Intent kirim = new Intent(ctx, DetailActivity.class);
+                kirim.putExtra("xNama", xNama);
+                kirim.putExtra("xAlamat", xAlamat);
+                kirim.putExtra("xJambBuka", xJamBuka);
+                kirim.putExtra("xKontak", xKontak);
+                kirim.putExtra("xFoto", xFoto);
+                ctx.startActivity(kirim);
+            }
+        });
     }
 
     @Override

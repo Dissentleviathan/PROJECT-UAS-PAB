@@ -14,24 +14,24 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.VHPahlawan>{
+public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.ClassViewHolder>{
     private ArrayList<ModelIndomaret> dataIndomaret;
     private Context ctx;
 
-    public AdapterGrid(ArrayList<ModelIndomaret> dataPahlawan, Context ctx) {
-        this.dataIndomaret = dataPahlawan;
+    public AdapterGrid(ArrayList<ModelIndomaret> dataIndomaret, Context ctx) {
+        this.dataIndomaret = dataIndomaret;
         this.ctx = ctx;
     }
 
     @NonNull
     @Override
-    public VHPahlawan onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View VW = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_grid, parent, false);
-        return new VHPahlawan(VW);
+    public ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View varView = LayoutInflater.from(ctx).inflate(R.layout.item_grid, parent, false);
+        return new ClassViewHolder(varView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VHPahlawan holder, int position) {
+    public void onBindViewHolder(@NonNull ClassViewHolder holder, int position) {
         ModelIndomaret indomaret = dataIndomaret.get(position);
 
         Glide
@@ -42,7 +42,7 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.VHPahlawan>{
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 String xNama, xAlamat, xJamBuka, xKontak, xFoto;
 
                 xNama = indomaret.getNama();
@@ -69,10 +69,10 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.VHPahlawan>{
         return dataIndomaret.size();
     }
 
-    public class VHPahlawan extends RecyclerView.ViewHolder {
+    public class ClassViewHolder extends RecyclerView.ViewHolder {
         ImageView ivGrid;
 
-        public VHPahlawan(@NonNull View itemView) {
+        public ClassViewHolder(@NonNull View itemView) {
             super(itemView);
             ivGrid = itemView.findViewById(R.id.iv_grid);
         }

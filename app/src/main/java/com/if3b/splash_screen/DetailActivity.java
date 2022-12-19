@@ -7,10 +7,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import  com.bumptech.glide.Glide;
 
 
-public class DetailActivity extends Activity {
+public class DetailActivity extends AppCompatActivity {
     private ImageView ivFoto;
     private TextView tvNama, tvAlamat, tvJamBuka, tvKontak;
     private String yNama, yAlamat, yJamBuka, yKontak, yFoto;
