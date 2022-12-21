@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:elevation="32dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/tv_title_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30px"
+            android:text="About Us"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/iv_foto"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="6dp"
+            android:layout_below="@id/tv_title_about"
+            />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/iv_foto"
+            android:layout_below="@id/tv_title_about"/>
+
+
+        <TextView
+            android:id="@+id/tv_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NPM"
+            android:layout_toRightOf="@+id/iv_foto"
+            android:layout_below="@+id/tv_nama"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"
+            />
+
+        <TextView
+            android:id="@+id/tv_jambuka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Mail"
+            android:layout_toRightOf="@+id/iv_foto"
+            android:layout_below="@+id/tv_alamat"
+            android:maxLines="7"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/tv_kontak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. Telp"
+            android:layout_toRightOf="@+id/iv_foto"
+            android:layout_below="@+id/tv_jambuka"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

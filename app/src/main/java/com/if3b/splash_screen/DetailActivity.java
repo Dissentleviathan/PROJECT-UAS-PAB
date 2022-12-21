@@ -54,7 +54,7 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getLokasi = yNama;
 
-                Uri location = Uri.parse("geo:0,0?q=" + getLokasi);
+                Uri location = Uri.parse("geo:0,0?q=" + getLokasi + " Palembang");
 
                 Intent bukaLokasi = new Intent(Intent.ACTION_VIEW, location);
                 startActivity(bukaLokasi);

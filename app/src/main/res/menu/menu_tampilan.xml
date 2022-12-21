@@ -10,7 +10,7 @@
         android:title="Tampilan Grid"/>
 
     <item
-        android:id="@+id/about"
+        android:id="@+id/menu_about"
         android:title="About US"/>
 
 </menu>

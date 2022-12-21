@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
         rvIndomaret.setAdapter(AG);
     }
 
+    private void tampilAbout(){
+        about_card AC = new about_card();
+
+        rvIndomaret.setLayoutManager(new LinearLayoutManager(this));
+        rvIndomaret.setAdapter(AC);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_tampilan, menu);
@@ -56,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menu_grid:
                 tampilDataGrid();
+                break;
+
+            case R.id.menu_about:
+                tampilAbout();
                 break;
         }
         return super.onOptionsItemSelected(item);
