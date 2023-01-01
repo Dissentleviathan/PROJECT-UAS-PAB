@@ -6,29 +6,36 @@
     android:elevation="32dp">
 
     <RelativeLayout
+        android:id="@+id/rl_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="6dp">
+        android:layout_height="wrap_content">
+
 
         <TextView
             android:id="@+id/tv_title_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="30px"
-            android:text="About Us"
+            android:text="Our Team"
             android:layout_centerHorizontal="true"
             android:textSize="20dp"
             android:textColor="@color/black"
             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:layout_marginTop="40dp">
 
         <ImageView
-            android:id="@+id/iv_foto"
+            android:id="@+id/iv_foto_1"
             android:layout_width="75dp"
             android:layout_height="100dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/pic1"
             android:scaleType="centerCrop"
             android:layout_marginRight="6dp"
-            android:layout_below="@id/tv_title_about"
             />
 
         <TextView
@@ -38,45 +45,124 @@
             android:text="Nama"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/iv_foto"
-            android:layout_below="@id/tv_title_about"/>
-
+            android:layout_toRightOf="@id/iv_foto_1"/>
 
         <TextView
             android:id="@+id/tv_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NPM"
-            android:layout_toRightOf="@+id/iv_foto"
+            android:layout_toRightOf="@id/iv_foto_1"
             android:layout_below="@+id/tv_nama"
             android:maxLines="2"
             android:ellipsize="end"
-            android:justificationMode="inter_word"
-            />
+            android:justificationMode="inter_word"/>
 
         <TextView
-            android:id="@+id/tv_jambuka"
+            android:id="@+id/tv_npm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="E-Mail"
-            android:layout_toRightOf="@+id/iv_foto"
+            android:layout_toRightOf="@id/iv_foto_1"
             android:layout_below="@+id/tv_alamat"
             android:maxLines="7"
             android:ellipsize="end"
             android:justificationMode="inter_word"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_foto_2"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pic3"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="6dp"
+            />
 
         <TextView
-            android:id="@+id/tv_kontak"
+            android:id="@+id/tv_nama2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No. Telp"
-            android:layout_toRightOf="@+id/iv_foto"
-            android:layout_below="@+id/tv_jambuka"
-            android:maxLines="1"
+            android:text="Nama"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/iv_foto_2"/>
+
+        <TextView
+            android:id="@+id/tv_npm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NPM"
+            android:layout_toRightOf="@id/iv_foto_2"
+            android:layout_below="@+id/tv_nama2"
+            android:maxLines="2"
             android:ellipsize="end"
             android:justificationMode="inter_word"/>
 
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Mail"
+            android:layout_toRightOf="@id/iv_foto_2"
+            android:layout_below="@+id/tv_npm2"
+            android:maxLines="7"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"/>
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:layout_marginTop="300dp">
+
+        <ImageView
+            android:id="@+id/iv_foto_3"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pic2"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="6dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_nama3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Linus Ardell Chaesa H"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/iv_foto_3"/>
+
+        <TextView
+            android:id="@+id/tv_npm3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2125250078"
+            android:layout_toRightOf="@id/iv_foto_3"
+            android:layout_below="@+id/tv_nama3"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/tv_email3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="linus2016@chaesa.com"
+            android:layout_toRightOf="@id/iv_foto_3"
+            android:layout_below="@+id/tv_npm3"
+            android:maxLines="7"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
