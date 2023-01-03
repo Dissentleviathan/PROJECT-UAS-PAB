@@ -6,15 +6,19 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvIndomaret;
     private ArrayList<ModelIndomaret> data = new ArrayList<>();
+    private RecyclerView menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +46,10 @@ public class MainActivity extends AppCompatActivity {
         rvIndomaret.setAdapter(AG);
     }
 
-    private void tampilAbout(){
-        about_card AC = new about_card();
+    private void tampilAbout() {
+        Intent intent = new Intent(this, about.class);
+        startActivity(intent);
 
-        rvIndomaret.setLayoutManager(new LinearLayoutManager(this));
-        rvIndomaret.setAdapter(AC);
     }
 
     @Override
@@ -64,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_grid:
                 tampilDataGrid();
                 break;
-
             case R.id.menu_about:
                 tampilAbout();
                 break;
