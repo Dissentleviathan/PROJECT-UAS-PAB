@@ -1,5 +1,7 @@
 package com.if3b.splash_screen;
 
+import android.media.Image;
+
 import java.util.ArrayList;
 
 public class DataIndomaret {
