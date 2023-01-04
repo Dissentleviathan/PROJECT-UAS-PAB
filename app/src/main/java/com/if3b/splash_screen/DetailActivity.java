@@ -48,7 +48,7 @@ public class DetailActivity extends AppCompatActivity {
         tvAlamat.setText(yAlamat);
         tvJamBuka.setText(yJamBuka);
         tvKontak.setText(yKontak);
-        Glide.with(DetailActivity.this).load(yFoto).into(ivFoto);
+        Glide.with(DetailActivity.this).load(yFoto).placeholder(R.drawable.domar).into(ivFoto);
         btnLokasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

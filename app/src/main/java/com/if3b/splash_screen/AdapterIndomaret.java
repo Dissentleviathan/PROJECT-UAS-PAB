@@ -40,7 +40,7 @@ public class AdapterIndomaret extends RecyclerView.Adapter<AdapterIndomaret.Clas
     holder.tvAlamat.setText(indomaret.getAlamat());
     holder.tvJambuka.setText(indomaret.getJamBuka());
     holder.tvKontak.setText(indomaret.getKontak());
-        Glide.with(ctx).load(indomaret.getFoto()).centerCrop().into(holder.ivFoto);
+        Glide.with(ctx).load(indomaret.getFoto()).centerCrop().placeholder(R.drawable.domar).into(holder.ivFoto);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

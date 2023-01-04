@@ -38,6 +38,7 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.ClassViewHolde
                 .with(ctx)
                 .load(indomaret.getFoto())
                 .centerCrop()
+                .placeholder(R.drawable.indomaretround)
                 .into(holder.ivGrid);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
